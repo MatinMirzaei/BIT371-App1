@@ -18,8 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void sayHello(View view) {
-        Log.i("INFO", "Hello World!");
-        TextView tv = findViewById(R.id.ViewText);
+    public void goToActivity(View view) {
+        Log.i("INFO", "Transitioning to" + Activity2.class.getName());
+        Intent intent = new Intent(getApplicationContext(), Activity2.class);
+        intent.putExtra("msg", "Hello Activity2!");
+        //..This will run the second activity
+        startActivity(intent);
     }
 }

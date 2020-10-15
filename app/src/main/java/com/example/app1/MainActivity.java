@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         EditText user = findViewById(R.id.username);
         EditText pass = findViewById(R.id.password);
         String fixusername = user.getText().toString();
-        String fixpassword = user.getText().toString();
+        String fixpassword = pass.getText().toString();
 
 
         Intent intent = new Intent (getApplicationContext(),UserConfirmationActivity.class);
